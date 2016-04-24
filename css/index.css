@@ -1,0 +1,369 @@
+html {
+	font-size: 15px;
+	line-height: 1.5;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-text-size-adjust: 100%;
+	word-wrap: break-word;
+}
+
+body {
+	margin: 0;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	display: block;
+	color: black;
+}
+a span {
+	color: #999;
+}
+a.normal {
+	display: initial;
+	color: #259;
+	font-size: 1.15em;
+}
+
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.sprites-b {
+	background-image: url(../img/sprites-1.9.2.4c54885a.png);
+	background-size: 308px 250px;
+	box-sizing: border-box;
+	background-clip: content-box;
+	/*width: 30px;
+	height: 36px;
+	padding: 6px 3px;*/
+}
+
+header {
+	 /* border: 2px solid red; */
+}
+#topMenu {
+	/*on normal condition*/
+	height: 2.813rem;
+	background-color: #0766C5;
+	background: -webkit-linear-gradient(#086DD4, #055DB6);
+	background: linear-gradient(#086DD4, #055DB6);
+	border-bottom: 1px solid #055DB6;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+#topMenu.onsearch #askBtn{
+	/*searching, searchInput got focus*/
+	display: none;
+}
+
+#logoBox {
+	width: 61px;
+	height: 31px;
+	background-image: url(../img/new_logo@2x.9187366b.png);
+	background-size: 61px 31px;
+	background-repeat: no-repeat;
+	text-indent: -999px;
+	flex: 0 0 auto;
+	margin-left: 6px;
+}
+#searchForm {
+	height: 1.875rem;
+	border-radius: 3px;
+	background-color: #E1EAF2;
+	flex: 1 1 auto;
+	margin-left: 10px;
+	margin-right: 6px;
+}
+#searchForm > div {
+	height: 100%;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+#searchInput {
+	height: 1rem;
+	width: 0;
+	background: transparent;
+	border: none;
+	font-size: 0.9rem;
+	flex: 1 1 auto;
+	margin-left: 10px;
+}
+#searchInput:focus {
+	outline: none;
+}
+#searchIcon {
+	box-sizing: border-box;
+	width: 1.875rem;
+	height: 1.875rem;
+	background-image: url(../img/sprites@2x.auto.1cc5b15c.png);
+	background-size: 4.5rem 4.375rem;
+	background-position: -2.25rem -0.5rem;
+	padding: 0.5rem;
+	background-clip: content-box;
+	flex: 0 0 auto;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+#searchIcon:focus {
+	outline: none;
+}
+#askBtn {
+	width: 3.875rem;
+	height: 2rem;
+	border-radius: 3px;
+	background-color: #0D76E1;
+	color: white;
+	border: 1px solid #045bb2;
+	font-size: 1.1em;
+	font-family: monospace;
+	flex: 0 0 auto;
+	margin-right: 6px;
+}
+#navMenu {
+	background-color: #F3F3F3;
+	height: 2.25rem;
+	position: relative;
+	z-index: 99;
+	top: 2.813rem;
+}
+#navMenu ul {
+	padding: 0;
+	margin: 0;
+	display: -webkit-flex;
+	display: flex;
+	text-align: center;
+	flex-flow: row wrap;
+	align-items: stretch;
+	border-bottom: 1px solid #DFDFDF;
+}
+#navMenu li {
+	list-style: none;
+	flex: 1 1 auto;
+	border-right: 1px solid #DFDFDF;
+	line-height: 2.25rem;
+}
+#navMenu li:last-child {
+	border-right: none;
+}
+
+#messageWrap {
+	/*on normal condition, hide the message menu*/
+	display: none;
+}
+#messageWrap.show {
+	/*show */
+	display: inherit;
+	box-sizing: border-box;
+	background-color: white;
+	border-bottom: 1px solid #DFDFDF;
+	width: 100%;
+}
+.msgBtn button {
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.msgBtn i{
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	padding: 0;
+}
+
+.msgBtn:nth-child(1) i{
+	background-position: -94px -60px;
+}
+
+.msgBtn:nth-child(2) i{
+	background-position: -122px -60px;
+}
+
+.msgBtn:nth-child(3) i{
+	background-position: -150px -60px;
+}
+
+.msgBtn.current:nth-child(1) i{
+	background-position: -94px -81px;
+}
+
+.msgBtn.current:nth-child(2) i{
+	background-position: -122px -81px;
+}
+
+.msgBtn.current:nth-child(3) i{
+	background-position: -150px -81px;
+}
+
+
+.msgContent {
+	box-sizing: border-box;
+	padding: 7px 11px;
+	border-bottom: 1px solid #DFDFDF;
+	line-height: 1.8;
+}
+
+.setting {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	border-bottom: 1px solid #DFDFDF;
+	flex-flow: row wrap;
+}
+
+.setting:last-child {
+	padding: 0 11px;
+}
+.setting a {
+	color: #999;
+}
+.setting h2 {
+	color: #666;
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+.settingIcon {
+	width: 30px;
+	height: 36px;
+	padding: 6px 3px;
+	display: inline-block;
+	vertical-align: middle;
+	background-position: -47px -138px;
+}
+
+#mainWrap {
+	position: relative;
+	top: 2.813rem;
+	padding: 5px 10px;
+}
+
+.listIcon {
+	width: 30px;
+	height: 36px;
+	padding: 6px 3px;
+	display: inline-block;
+	vertical-align: middle;
+	background-position: -66px -78px;
+}
+
+.mainContent {
+	padding: 6px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.question-category {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #999;
+}
+.userImage {
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	background-image: url(../img/favicon.ico);
+	background-size: 100% 100%;
+	background-position: 0 0;
+	box-sizing: border-box;
+	background-clip: content-box;
+}
+
+.question-link {
+	font-size: 1rem;
+	margin: 5px 0;
+}
+div.summary {
+	padding: 10px 0;
+	line-height: 1.7;
+	word-break: break-word;
+}
+img.summary{
+	float: left;
+	width: 200px;
+	height: 110px;
+	margin: 5px;
+	margin: 1px 10px 5px 0;
+	border-radius: 8px;
+}
+
+.answer-operate {
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+}
+.answer-operate > a {
+	margin: 0 6px;
+	flex: 0 0 auto;
+	color: #999;
+}
+
+a.agreeNum {
+	color: #698ebf;
+	background-color: rgb(225, 239, 247);
+	border-radius: 5px;
+	padding-left: 6px;
+}
+
+i.agreeIcon {
+	display: inline-block;
+	vertical-align: middle;
+	background-position: 4px -166px;
+	width: 13px;
+	height: 16px;
+	padding: 2px;
+}
+i.followIcon {
+	display: inline-block;
+	vertical-align: middle;
+	background-position: -94px -19px;
+	height: 16px;
+	width: 15px;
+	padding: 0px;
+	margin-right: 2px;
+	margin-bottom: 3px;
+}
+i.commentIcon {
+	display: inline-block;
+	vertical-align: middle;
+	background-position: -25px -19px;
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin-bottom: 4px;
+	margin-right: 1px;
+}
+i.thankIcon {
+	display: inline-block;
+	vertical-align: middle;
+	background-position: -66px -78px;
+}
+#dot {
+	width: auto;
+	color: #999;
+	font-size: 15px;
+	font-weight: bolder;
+	line-height: 18px;
+	margin: 0;
+	padding: 0 3px;
+	vertical-align: middle;
+	font-family: Arial;
+}
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <meta content="email=no" name="format-detection">
+        <link rel="shortcut icon" href="img/favicon.ico">
+		<title>Fake Zhihu</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		
+	</head>
+	<body>
+		<div id="topMenu" class="onsearch">
+			<a href="index.html" id="logoBox" class="navAlign">首页-知乎</a>
+			<form action="" method="get" id="searchForm">
+				<div id="searchWrap">
+					<input type="text" id="searchInput" value="" placeholder="搜索你感兴趣的内容..." />
+					<input type="button" id="searchIcon" value="" />
+				</div>
+			</form>
+			<input type="button" id="askBtn" value="提问" />
+		</div>
+		<div id="navMenu">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="">话题</a></li>
+				<li><a href="">发现</a></li>
+				<li><a href="">消息<span id="arrow-down"></span></a></li>
+				<li><a href="">我<span id="arrow-down"></span></a></li>
+			</ul>
+			<div id="messageWrap" class=""> 
+				<ul>
+					<li class="msgBtn current"><button><i class="sprites-b"></i></button></li>
+					<li class="msgBtn"><button><i class="sprites-b"></i></button></li>
+					<li class="msgBtn"><button><i class="sprites-b"></i></button></li>
+				</ul>
+				<div class="msgContent">
+					为啥父对象高度会坍塌呢？上面也说过了，浮动元素已经脱离了普通流，父对象所在的普通流比喻成地表，
+				</div>
+				<div class="msgContent">
+					为啥父对象高度会坍塌呢？上面也说过了，浮动元素已经脱离了普通流，父对象所在的普通流比喻成地表，那浮动元素就已经上天了。
+				</div>
+				<div class="setting">
+					<!--描述：MB的怎么这个setting居然不是firstchild？变成了lastchild，而且还不是第二个，是第三个！-->
+					<a href=""><i class="sprites-b settingIcon"></i>设置</a>
+					<a href="">查看全部 »</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div id="mainWrap">
+			<div class="setting">
+				<!-- 描述：MB的怎么这个setting才是firstchild-->
+				<h2><i class="sprites-b listIcon"></i>最新动态</h2>
+				<a href=""><i class="sprites-b settingIcon"></i><span>设置</span></a>
+			</div>
+			<div class="mainContent">
+				<div class="question-category">
+					<span>
+						来自 <a href="" class="normal">类目</a>
+					</span>
+					<a href=""><i class="userImage"></i></a>
+				</div>
+				<div class="question">
+					<h2 class="question-link"><a href="" class="normal">有哪些好的网站，让人第一眼看了就怦然心动，流连忘返？</a></h2>
+					<div class="answer">
+						<div class="answer-source">
+							<a href="" class="normal">答主昵称，</a>
+							<span title="intro">小狐狸精之绿宝石盒子</span>
+						</div>
+						<div class="summary clearfix">
+							<img src="img/pictest.png" class="summary" /> 泻药 这两天被这个兔子还是狼的事情刷屏刷得不胜其烦。大概在三年前的4月19日，老史在仙侠世界的发布会上正式宣布隐退。这才刚过3年，就像当年柳传志宣布回归联想重任董事长一样，史玉柱宣布回归巨人网络（现在上市主体还叫世纪游轮），宣布第四次创业，然...
+							<a href="" class="normal"> 显示全部</a>
+						</div>
+						<div class="answer-operate">
+							<a href="" class="agreeNum">999<i class="sprites-b agreeIcon"></i></a>
+							<a href=""><i class="sprites-b followIcon"></i>关注问题</a>
+							<a href=""><i class="sprites-b commentIcon"></i>99 条评论</a>
+							<span id="dot">•</span>
+							<a href="">作者保留权利</a>
+						</div>
+					</div>
+				</div>
+			</div>	
+			
+			
+			
+			<div class="mainContent">
+				为什么要先说尺寸呢？
+			</div>	
+			
+			<div id="footer">
+				(c) Copyright 2016 Qieguo. All Rights Reserved. 
+			</div>
+		</div>
+	</body>
+</html>
