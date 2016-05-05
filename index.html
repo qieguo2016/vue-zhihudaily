@@ -13,16 +13,15 @@
 		
 	</head>
 	<body>
-		<div id="topMenu" class="onsearch">
-			<a href="index.html" id="logoBox" class="navAlign">首页-知乎</a>
-			<form action="" method="get" id="searchForm">
-				<div id="searchWrap">
-					<input type="text" id="searchInput" value="" placeholder="搜索你感兴趣的内容..." />
-					<input type="button" id="searchIcon" value="" />
-				</div>
+		<div class="zh-top" id="zd-top">
+			<a class="zh-top-home-link" href="index.html">首页-知乎</a>
+			<form action="" method="get" class="zh-top-search" id="zd-top-search">
+				<input id="zd-top-search-input" class="zh-top-search-input" type="text" value="" placeholder="搜索你感兴趣的内容..." />
+				<input class="zh-top-search-btn" type="submit" value="" />
 			</form>
-			<input type="button" id="askBtn" value="提问" />
+			<input class="zh-top-add-question" id="zd-top-add-question" type="button" value="提问" />
 		</div>
+		
 		<div id="navMenu">
 			<ul>
 				<li><a href="index.html">首页</a></li>
@@ -44,7 +43,6 @@
 					为啥父对象高度会坍塌呢？上面也说过了，浮动元素已经脱离了普通流，父对象所在的普通流比喻成地表，那浮动元素就已经上天了。
 				</div>
 				<div class="setting">
-					<!--描述：MB的怎么这个setting居然不是firstchild？变成了lastchild，而且还不是第二个，是第三个！-->
 					<a href=""><i class="sprites-b settingIcon"></i>设置</a>
 					<a href="">查看全部 »</a>
 				</div>
@@ -55,7 +53,6 @@
 		
 		<div id="mainWrap">
 			<div class="setting">
-				<!-- 描述：MB的怎么这个setting才是firstchild-->
 				<h2><i class="sprites-b listIcon"></i>最新动态</h2>
 				<a href=""><i class="sprites-b settingIcon"></i><span>设置</span></a>
 			</div>
@@ -91,12 +88,20 @@
 			
 			
 			<div class="mainContent">
-				为什么要先说尺寸呢？
+				爱编程，注重用户体验，喜欢捣鼓各种有趣的东西。
+				喜欢前端，因为他的各种炫酷，更因为她离用户最近。<br />
+				------<br />
+				“人活着到最后只有记忆才是最宝贵的！” 那些你到过的地方，相处过的人，做过的事情，就是这些记忆填满了我们的一生。<br />
+				------<br />
+				“我们在做选择的时候都不知道将来会是什么样子的，但是放心，等将来的某一天，你再回过去看，所有重要的选择都能连成一条线，前因后果。” <br />
+				------<br />
+				“成就你的，不是你的聪明才智，而是你的选择。”
 			</div>	
 			
 			<div id="footer">
 				(c) Copyright 2016 Qieguo. All Rights Reserved. 
 			</div>
 		</div>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>
