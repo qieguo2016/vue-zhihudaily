@@ -21,75 +21,114 @@
 			</form>
 			<input class="zh-top-add-question" id="zd-top-add-question" type="button" value="提问" />
 		</div>
-		
-		<div id="navMenu">
-			<ul>
-				<li><a href="index.html">首页</a></li>
-				<li><a href="">话题</a></li>
-				<li><a href="">发现</a></li>
-				<li><a href="">消息<span id="arrow-down"></span></a></li>
-				<li><a href="">我<span id="arrow-down"></span></a></li>
+	
+		<div class="zh-nav" id="zd-nav">
+			<ul class="zh-nav-menu">
+				<li class="zh-nav-menu-li" id="zd-nav-menu-home">
+					<a href="index.html">首页</a>
+				</li>
+				<li class="zh-nav-menu-li" id="zd-nav-menu-topic">
+					<a href="">话题</a>
+				</li>
+				<li class="zh-nav-menu-li" id="zd-nav-menu-explore">
+					<a href="">发现</a>
+				</li>
+				<li class="zh-nav-menu-li" id="zd-nav-menu-msg">
+					<a href="">消息<span class="arrow-down"></span></a>
+				</li>
+				<li class="zh-nav-menu-li" id="zd-nav-menu-user">
+					<a href="">我<span class="arrow-down"></span></a>
+					<ul class="zh-nav-user">
+						<li class="zh-nav-user-li"><a href="">我的主页</a></li>
+						<li class="zh-nav-user-li"><a href="">私信</a></li>
+						<li class="zh-nav-user-li"><a href="">设置</a></li>
+						<li class="zh-nav-user-li"><a href="">退出</a></li>
+						<li class="zh-nav-user-li">△</li>
+					</ul>
+				</li>
 			</ul>
-			<div id="messageWrap" class=""> 
-				<ul>
-					<li class="msgBtn current"><button><i class="sprites-b"></i></button></li>
-					<li class="msgBtn"><button><i class="sprites-b"></i></button></li>
-					<li class="msgBtn"><button><i class="sprites-b"></i></button></li>
-				</ul>
-				<div class="msgContent">
+			<div class="zh-nav-msg" id="zd-nav-msg"> 
+				<div class="zh-nav-msg-sort">
+					<button class="nav-msg-sort msg-icon current" id=""><i class="sprites-b"></i></button>
+					<button class="nav-msg-sort user-icon" id=""><i class="sprites-b"></i></button>
+					<button class="nav-msg-sort thk-icon" id=""><i class="sprites-b"></i></button>
+				</div>
+				<div class="zh-nav-msg-ctn">
 					为啥父对象高度会坍塌呢？上面也说过了，浮动元素已经脱离了普通流，父对象所在的普通流比喻成地表，
 				</div>
-				<div class="msgContent">
+				<div class="zh-nav-msg-ctn">
 					为啥父对象高度会坍塌呢？上面也说过了，浮动元素已经脱离了普通流，父对象所在的普通流比喻成地表，那浮动元素就已经上天了。
 				</div>
-				<div class="setting">
-					<a href=""><i class="sprites-b settingIcon"></i>设置</a>
+				<div class="zh-nav-msg-set">
+					<a href=""><i class="sprites-b set-icon"></i>设置</a>
 					<a href="">查看全部 »</a>
 				</div>
 			</div>
 		</div>
 		
-		
-		
-		<div id="mainWrap">
-			<div class="setting">
-				<h2><i class="sprites-b listIcon"></i>最新动态</h2>
-				<a href=""><i class="sprites-b settingIcon"></i><span>设置</span></a>
+		<div class="zh-main" id="zd-main">
+			<div class="zh-main-set">
+				<h2><i class="sprites-b list-icon"></i>最新动态</h2>
+				<a href=""><i class="sprites-b set-icon"></i>设置</a>
 			</div>
-			<div class="mainContent">
-				<div class="question-category">
-					<span>
-						来自 <a href="" class="normal">类目</a>
-					</span>
-					<a href=""><i class="userImage"></i></a>
+			
+			<div class="zh-main-ctn">
+				<div class="zh-main-ctn-sort">
+					<span>来自 <a href="" class="normal">用户体验设计</a></span>
+					<a href=""><i class="zh-ctn-sort-user"></i></a>
 				</div>
-				<div class="question">
-					<h2 class="question-link"><a href="" class="normal">有哪些好的网站，让人第一眼看了就怦然心动，流连忘返？</a></h2>
-					<div class="answer">
-						<div class="answer-source">
-							<a href="" class="normal">答主昵称，</a>
-							<span title="intro">小狐狸精之绿宝石盒子</span>
+				<div class="zh-main-ctn-question">
+					<h2><a href="" class="normal">有哪些好的网站，让人第一眼看了就怦然心动，流连忘返？</a></h2>
+					<div class="zh-main-ctn-answer">
+						<div class="zh-main-ctn-author">
+							<a href="" class="normal">康石石,</a>
+							<span title="intro">艺术留学大拿</span>
 						</div>
-						<div class="summary clearfix">
-							<img src="img/pictest.png" class="summary" /> 泻药 这两天被这个兔子还是狼的事情刷屏刷得不胜其烦。大概在三年前的4月19日，老史在仙侠世界的发布会上正式宣布隐退。这才刚过3年，就像当年柳传志宣布回归联想重任董事长一样，史玉柱宣布回归巨人网络（现在上市主体还叫世纪游轮），宣布第四次创业，然...
-							<a href="" class="normal"> 显示全部</a>
+						<div class="zh-main-answer-summary clearfix">
+							<img src="img/pictest001.png"/>推荐2个，一个给人耳目一新的网站浏览体验，一个是超级实用的设计灵感来源网站I Remember一个关于回忆的网站（强烈建议，亲身体验）IntroHome page所有的光斑都是用户登录网站留下的回忆，就像浩瀚银河通过鼠标，可以在回忆的银河中穿行滚动鼠标滑轮，可以…
+							<a href="" class="normal">显示全部</a>
 						</div>
-						<div class="answer-operate">
-							<a href="" class="agreeNum">999<i class="sprites-b agreeIcon"></i></a>
-							<a href=""><i class="sprites-b followIcon"></i>关注问题</a>
-							<a href=""><i class="sprites-b commentIcon"></i>99 条评论</a>
-							<span id="dot">•</span>
-							<a href="">作者保留权利</a>
+						<div class="zh-main-answer-operate">
+							<a href="" class="zh-answer-agree">869<i class="sprites-b agree-icon"></i></a>
+							<a href=""><i class="sprites-b follow-icon"></i>关注问题</a>
+							<a href=""><i class="sprites-b comment-icon"></i>9 条评论</a>
+							<span class="zh-main-answer-operate-dot">•</span>
+							<a href="">禁止转载</a>
 						</div>
 					</div>
 				</div>
 			</div>	
 			
+			<div class="zh-main-ctn">
+				<div class="zh-main-ctn-sort">
+						<span>来自 <a href="" class="normal">海贼王</a></span>
+						<a href=""><i class="zh-ctn-sort-user"></i></a>
+					</div>
+					<div class="zh-main-ctn-question">
+						<h2><a href="" class="normal">怎么评价海贼王里的索隆？</a></h2>
+						<div class="zh-main-ctn-answer">
+							<div class="zh-main-ctn-author">
+								<a href="" class="normal">许达，</a>
+								<span title="intro">知道多一些又不会被灭口</span>
+							</div>
+							<div class="zh-main-answer-summary clearfix">
+								<img src="img/pictest.png" class="summary" />Roronoa Zoro，草帽海贼团剑士，路飞招募的第一个船员，评价Zoro我想从以下几个方面来说。一、实力索隆作为三大主力之一，毫无疑问是草帽海贼团最重要的战斗力之一，三大主力的战斗风格分别是拳头、剑和踢技。理论上，兵刃总比拳脚厉害，所以画起索隆的实力…
+								<a href="" class="normal">显示全部</a>
+							</div>
+							<div class="zh-main-answer-operate">
+								<a href="" class="zh-answer-agree">2040<i class="sprites-b agree-icon"></i></a>
+								<a href=""><i class="sprites-b follow-icon"></i>关注问题</a>
+								<a href=""><i class="sprites-b comment-icon"></i>172 条评论</a>
+								<span class="zh-main-answer-operate-dot">•</span>
+								<a href="">作者保留权利</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			
 			
 			<div class="mainContent">
-				爱编程，注重用户体验，喜欢捣鼓各种有趣的东西。
-				喜欢前端，因为他的各种炫酷，更因为她离用户最近。<br />
+				爱编程，注重用户体验，喜欢捣鼓各种有趣的东西。<br />
 				------<br />
 				“人活着到最后只有记忆才是最宝贵的！” 那些你到过的地方，相处过的人，做过的事情，就是这些记忆填满了我们的一生。<br />
 				------<br />
