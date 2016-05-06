@@ -4,9 +4,9 @@
  * question button will disappear and input box will stretch
  */
 var topSearch = document.getElementById('zd-top-search-input');
-topSearch.addEventListener('focus', function () {
+topSearch.addEventListener('focusin', function () {
 	var top = document.getElementById('zd-top');
-	top.className = top.className + ' searching';
+	top.className = 'zh-top searching';
 });
 topSearch.addEventListener('focusout', function () {
 	var top = document.getElementById('zd-top');

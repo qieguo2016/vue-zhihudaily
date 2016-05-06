@@ -126,14 +126,16 @@ a {
 	color: white;
 	background-color: #0D76E1;
 	border: 1px solid #045bb2;
+	outline: 0;
 	border-radius: 3px;
 	font-family: monospace;
 	font-size: 1.1em;
 	word-wrap: normal;
 	box-shadow: 0 1px 2px rgba(0,0,0,.05),inset 0 1px 1px rgba(255,255,255,.15);
-	-webkit-transition: all .5s ease-in-out;
-	transition: all .5s ease-in-out;
+	-webkit-transition: width .5s ease;
+	transition: width .5s ease;
 }
+
 .searching .zh-top-search{
 	background-color: white;
 }
@@ -191,7 +193,8 @@ a {
 }
 .zh-nav-user.show .zh-nav-user-li {
 	box-sizing: border-box;
-	padding-left: 10%;
+	/* padding-left: 10%; */
+	text-indent: 10px;
 	line-height: 45px;
 	display: block;
 	border: none;
