@@ -3,7 +3,7 @@ FakeZhihu
 
 This is a Zhihu web page on mobile device, and it is created just for learning.
 
-It is not finished yet, don't push me, I am trying to work it out.
+It is not finished yet, I am working...
 
 Demo
 ---

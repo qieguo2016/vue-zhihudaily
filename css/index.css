@@ -17,23 +17,13 @@ a {
 	color: black;
 	/* height: 100%; */
 }
-
-
 .clearfix:after {
 	content: "";
 	clear: both;
 	display: block;
 }
 
-.sprites-b {
-	background-image: url(../img/sprites-1.9.2.4c54885a.png);
-	background-size: 308px 250px;
-	box-sizing: border-box;
-	background-clip: content-box;
-	/*width: 30px;
-	height: 36px;
-	padding: 6px 3px;*/
-}
+
 /***************    common style end   ***************/
 
 
@@ -184,13 +174,17 @@ a {
 	flex: 1 1 auto;
 	list-style: none;
 }
+.zh-nav-menu-li.current {
+	background-color: rgba(46,150,234,0.2);
+}
 .zh-nav-user {
 	position: absolute;
 	z-index: 99;
 	top: 37px;
-	left: -50%;
-	width: 150%;
+	right: 0;
+	width: 30%;
 	padding: 0;
+	margin: 0;
 	background-color: #F3F3F3;
 	/* border: 2px solid; */
 	border-radius: 0 0 0 6px;
@@ -258,22 +252,22 @@ a {
 	box-sizing: border-box;
 	background-clip: content-box;
 }
-.msg-icon i{
+.msg-icon {
 	background-position: -94px -60px;
 }
-.user-icon i{
+.user-icon {
 	background-position: -122px -60px;
 }
-.thk-icon i{
+.thk-icon {
 	background-position: -150px -60px;
 }
-.current.msg-icon i{
+.current .msg-icon {
 	background-position: -94px -81px;
 }
-.current.user-icon i{
+.current .user-icon {
 	background-position: -122px -82px;
 }
-.current.thk-icon i{
+.current .thk-icon {
 	background-position: -150px -82px;
 }
 .zh-nav-msg-ctn {
