@@ -1,3 +1,12 @@
+/*-----------------------------CSS File-----------------------------
+ *	Description: Though its name call FakeZhihu, but the layout solution is totally different from Zhihu.
+ *               In this project I try to use the flexbox solution, because it really simply and good method.
+ *	Browser support: Chrome,Firefox,Safari,Tencent X5(If there is any problem, please update your Web Browser to latest version)
+ *	2016.05 Created by @Qieguo
+ *	For more infomation：http://www.cnblogs.com/qieguo/
+ *--------------------------------------------------------------------
+ */
+
 /***************	common style    ***************/
 html {
 	font-size: 15px;

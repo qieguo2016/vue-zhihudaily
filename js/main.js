@@ -1,3 +1,15 @@
+/*-----------------------------【程序说明】-----------------------------
+ *	程序说明：	FakeZhihu的交互脚本
+ *	程序描述：	使用原生js编写的交互脚本，主要用在移动web端，这里都是一点一点拼凑的，写的非常难看。。。
+ *	浏览器支持：Chrome、Firefox、Safari，腾讯X5（若有问题，请更新浏览器到最新版）
+ *	2016年05月 Created by @茄果
+ *	更多信息请关注我的博客：http://www.cnblogs.com/qieguo/
+ *
+ *  Licensed under the MIT，转载使用请注明出处！http://www.cnblogs.com/qieguo/
+ *--------------------------------------------------------------------
+ */
+
+
 "use strict"
 
 /* ********    Header    ********
@@ -58,11 +70,13 @@ navMenu.addEventListener('click', function (e) {
 	switch (target.parentElement.id){
 		case 'zd-nav-menu-msg':
 			navUser.className = 'zh-nav-user';
-			navMsg.className = (navMsg.className == 'zh-nav-msg') ? 'zh-nav-msg show' : 'zh-nav-msg';
+			navMsg.classList.toggle('show');
+			//navMsg.className = (navMsg.className == 'zh-nav-msg') ? 'zh-nav-msg show' : 'zh-nav-msg';
 			break;
 		case 'zd-nav-menu-user':
 			navMsg.className = 'zh-nav-msg';
-			navUser.className = (navUser.className == 'zh-nav-user') ? 'zh-nav-user show' : 'zh-nav-user';
+			navUser.classList.toggle('show');
+			//navUser.className = (navUser.className == 'zh-nav-user') ? 'zh-nav-user show' : 'zh-nav-user';
 			break;
 		default:
 			break;
@@ -95,9 +109,6 @@ navMsgSort.addEventListener('click', function (e) {
 		default:
 			break;
 	}
-	
-	
-	
 //	e.preventDefault();
 	e.stopPropagation();
 });
