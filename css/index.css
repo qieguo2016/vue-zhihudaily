@@ -3,7 +3,7 @@
  *               In this project I try to use the flexbox solution, because it really simply and good method.
  *	Browser support: Chrome,Firefox,Safari,Tencent X5(If there is any problem, please update your Web Browser to latest version)
  *	2016.05 Created by @Qieguo
- *	For more infomation：http://www.cnblogs.com/qieguo/
+ *	For more infomationï¼šhttp://www.cnblogs.com/qieguo/
  *--------------------------------------------------------------------
  */
 
@@ -353,6 +353,7 @@ a.blue-link {
 	min-width: 250px;
 	padding: 0 10px;
 	position: relative;
+	padding-top: 10px;
 }
 .zh-main .normal {
 	display: initial;
@@ -370,11 +371,15 @@ a.blue-link {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	align-items: center;
+	margin-top: -5px;
+	/* height: 40px; */
 }
 .zh-main-set > h2 {
 	margin: 0;
 	color: #666;
 	font-size: 1.2rem;
+	/* height: 20px; */
+	/* padding: 0; */
 }
 .sprites-b {
 	box-sizing: border-box;
@@ -708,8 +713,10 @@ a.blue-link {
 }
 textarea[name="question"] {
 	box-sizing: border-box;
+	/* height: 42px; */
+	rows: 3;
 	padding: 8px 10px;
-	margin-bottom: 15px;
+	margin-bottom: 16px;
 	line-height: 24px;
 	resize: none;
 	font-size: 15px;
@@ -719,15 +726,15 @@ textarea[name="question"] {
 }
 .zh-mask-ask-descrip {
 	width: 100%;
-	margin-bottom: 15px;
+	margin-bottom: 16px;
 }
 .zh-mask-ask-descrip div {
-	margin-bottom: 5px;
+	margin-bottom: 7px;
 }
 textarea[name="question-descrip"] {
 	box-sizing: border-box;
 	width: 100%;
-	height: 98px;
+	height: 90px;
 	padding: 8px 10px;
 	line-height: 24px;
 	font-size: 15px;
@@ -740,7 +747,7 @@ textarea[name="question-descrip"] {
 	margin-bottom: 15px;
 }
 .zh-mask-ask-sort div {
-	margin-bottom: 5px;
+	margin-bottom: 7px;
 }
 .zh-mask-ask-sort-input {
 	box-sizing: border-box;
@@ -883,3 +890,58 @@ textarea[name="question-descrip"] {
 	margin-right: 57px;
 }
 /*******************   fullmask end     *******************/
+
+
+/*******************   collection start     *******************/
+.zh-main-tab-nav {
+	/* box-sizing: border-box; */
+	padding: 0;
+	margin: 0;
+	/* margin-top: 20px; */
+	height: 36px;
+	border-bottom: 1px solid #ccc;
+	/* line-height: 36px; */
+	font-size: 0;
+	letter-spacing: -4px;  /*用于兼容safari，根据不同字体字号或许需要做一定的调整*/
+}
+
+.zh-main-tab-li {
+	/* box-sizing: border-box; */
+	line-height: 25px;
+	/* margin-top: 2px; */
+	height: 25px;
+	font-size: 15px;
+	padding: 5px 15px;
+	list-style-type: none;
+	display: inline-block;
+	border: none;
+	letter-spacing: normal;  /*用于兼容safari，根据不同字体字号或许需要做一定的调整*/
+	vertical-align: bottom;
+	color: #269;
+}
+.zh-main-tab-li.current {
+	/* margin-right: 10px; */
+	background-color: white;
+	border: 1px solid #ccc;
+	border-bottom-color: transparent;
+	color: #666;
+}
+.zh-main-collections {
+	padding-top: 10px;
+	padding-left: 2px;
+	margin: 0;
+	line-height: 2;
+	color: #888;
+}
+.zh-main-collections li {
+	border-bottom: 1px solid hsla(0,0%,90%,0.7);
+	margin-bottom: 5px;
+	list-style-type: none;
+}
+.zh-main-collections li:last-child {
+	border-bottom: none;
+}
+.zh-main-collections h3 {
+	margin: 0;
+}
+/*******************   collection end     *******************/

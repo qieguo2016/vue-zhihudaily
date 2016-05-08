@@ -24,6 +24,7 @@ var pageMask = document.getElementById('zd-mask');
 var maskAsk = document.getElementById('zd-mask-ask');
 var maskVote = document.getElementById('zd-mask-vote');
 
+var collectionsNav = mainCtn.getElementsByClassName('zh-main-tab-nav')[0];
 
 /* ********    Header    ********/
 //search inputbox stretch when got focus
@@ -134,6 +135,26 @@ maskAsk.addEventListener('click', function (e) {
 	//e.preventDefault();
 	e.stopPropagation();
 });
+maskAsk.addEventListener('keypress', function (e) {
+	var k = e.charCode,
+		target = e.target;
+		
+	switch (k){
+		case 13:
+			// press [enter]
+			//console.log(target.style.height + " , " +target.scrollHeight);
+			//target.style.height = target.scrollHeight;
+			break;
+		default:
+			break;
+	}
+	//target.rows = (target.scrollHeight - 16) / 24;
+	//console.log(target.rows + " , " + target.scrollHeight);
+	//e.preventDefault();
+	e.stopPropagation();
+});
+
+
 maskVote.addEventListener('click', function (e) {
 	var value = e.target.dataset.opt || e.target.parentElement.dataset.opt;
 	var btn = this.getElementsByClassName('zh-mask-vote-btn');
@@ -166,3 +187,30 @@ maskVote.addEventListener('click', function (e) {
 });
 
 /* ********    pageMask end  ********/
+
+
+collectionsNav.addEventListener('click',function (e) {
+	var index,
+		target = e.target,
+		opt = target.dataset.opt,
+		children = this.getElementsByTagName('li'),
+		ctn = document.getElementsByClassName('zh-main-collections')[0];
+	for (index = 0; index < children.length; index++) {
+		children[index].classList.remove('current');
+	}
+	switch (opt){
+		case 'follow':
+			target.classList.add('current');
+			ctn.innerHTML = '<li><h3><a class="blue-link" href="">关注的话题</a></h3><span>9个答案 • 99个人关注</span></li>\
+				<li><h3><a class="blue-link" href="">关注的话题</a></h3><span>9个答案 • 99个人关注</span></li>';
+			break;
+		case 'creat':
+			ctn.innerHTML = '<li><h3><a class="blue-link" href="">创建的话题</a></h3><span>11个答案 • 111个人关注</span></li>\
+				<li><h3><a class="blue-link" href="">关注的话题</a></h3><span>11个答案 • 111个人关注</span></li>';
+			target.classList.add('current');
+			break;
+		default:
+			break;
+	}
+	e.stopPropagation();
+});
