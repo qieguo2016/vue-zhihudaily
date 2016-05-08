@@ -195,6 +195,9 @@ collectionsNav.addEventListener('click',function (e) {
 		opt = target.dataset.opt,
 		children = this.getElementsByTagName('li'),
 		ctn = document.getElementsByClassName('zh-main-collections')[0];
+	if (target.className == this.className) {
+		return;
+	}
 	for (index = 0; index < children.length; index++) {
 		children[index].classList.remove('current');
 	}
