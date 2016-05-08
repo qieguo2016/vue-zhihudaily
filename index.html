@@ -75,9 +75,9 @@
 				<div class="zh-nav-msg-set">
 					<a href="" class=""><i class="sprites-b set-icon"></i>设置</a>
 					<a href="">查看全部 »</a>
-				</div>
-			</div>
-		</div>
+				</div><!--消息设置面板-->
+			</div><!--消息面板-->
+		</div><!--导航设置-->
 		
 		<div class="zh-main" id="zd-main">
 			<div class="zh-main-set">
@@ -102,15 +102,15 @@
 							<a href="" class="normal">显示全部</a>
 						</div>
 						<div class="zh-main-answer-operate">
-							<a href="" class="zh-answer-agree">869<i class="sprites-b agree-icon"></i></a>
+							<a class="zh-answer-agree" href="" data-opt="answer-vote">869<i class="sprites-b agree-icon"></i></a>
 							<a href=""><i class="sprites-b follow-icon"></i>关注问题</a>
 							<a href=""><i class="sprites-b comment-icon"></i>9 条评论</a>
 							<span class="zh-main-answer-operate-dot">•</span>
 							<a href="">禁止转载</a>
-						</div>
-					</div>
-				</div>
-			</div>	
+						</div><!--答案操作-->
+					</div><!--答案概要内容-->
+				</div><!--问题及答案-->
+			</div><!--问题分类及答案-->
 			
 			<div class="zh-main-ctn">
 				<div class="zh-main-ctn-sort">
@@ -129,15 +129,15 @@
 							<a href="" class="normal">显示全部</a>
 						</div>
 						<div class="zh-main-answer-operate">
-							<a href="" class="zh-answer-agree">869<i class="sprites-b agree-icon"></i></a>
+							<a href="" class="zh-answer-agree" data-opt="answer-vote">869<i class="sprites-b agree-icon"></i></a>
 							<a href=""><i class="sprites-b follow-icon"></i>关注问题</a>
 							<a href=""><i class="sprites-b comment-icon"></i>9 条评论</a>
 							<span class="zh-main-answer-operate-dot">•</span>
 							<a href="">禁止转载</a>
-						</div>
-					</div>
-				</div>
-			</div>	
+						</div><!--答案操作-->
+					</div><!--答案概要内容-->
+				</div><!--问题及答案-->
+			</div><!--问题分类及答案-->
 			
 			<div class="zh-main-ctn">
 				<div class="zh-main-ctn-sort">
@@ -156,15 +156,15 @@
 							<a href="" class="normal">显示全部</a>
 						</div>
 						<div class="zh-main-answer-operate">
-							<a href="" class="zh-answer-agree">2040<i class="sprites-b agree-icon"></i></a>
+							<a href="" class="zh-answer-agree" data-opt="answer-vote">2040<i class="sprites-b agree-icon"></i></a>
 							<a href=""><i class="sprites-b follow-icon"></i>关注问题</a>
 							<a href=""><i class="sprites-b comment-icon"></i>172 条评论</a>
 							<span class="zh-main-answer-operate-dot">•</span>
 							<a href="">作者保留权利</a>
-						</div>
-					</div>
-				</div>
-			</div>
+						</div><!--答案操作-->
+					</div><!--答案概要内容-->
+				</div><!--问题及答案-->
+			</div><!--问题分类及答案-->
 			
 			<div class="zh-main-more" id="zd-main-more">
 				更多
@@ -189,40 +189,47 @@
 					<a href=""><i class="sprites-c writing-icon"></i>写文章</a>
 				</div>
 			</footer>
-
-			
 		</div>
 		
 		<footer class="copyright">
 			<p>Created By <a class="blue-link" href="http://www.cnblogs.com/qieguo/">Qieguo</a>, Under MIT License</p>
 		</footer>
 		
-		<div class="zh-mask" id="zd-mask" style="display: none;">
-			<div class="zh-mask-ctn">
-				<div class="zh-mask-ctn-title">
-					<span>提问</span><i class="sprites-b cancel-icon" data-name="cancel"></i>
+		<div class="zh-mask" id="zd-mask">
+			<div class="zh-mask-ask" id="zd-mask-ask">
+				<div class="zh-mask-ask-title">
+					<span>提问</span><i class="sprites-b cancel-icon" data-opt="cancel"></i>
 				</div>
-				<form class="zh-mask-ctn-wrap" action="" method="post">
+				<form class="zh-mask-ask-wrap" action="" method="post">
 					<textarea name="question" rows="1" cols="" placeholder="写下你的问题"></textarea>
-					<div class="zh-mask-ctn-descrip">
+					<div class="zh-mask-ask-descrip">
 						<div>问题说明(可选)</div>
 						<textarea name="question-descrip" rows="3" cols="" placeholder="问题背景、条件等详细信息"></textarea>
 					</div>
-					<div class="zh-mask-ctn-sort">
+					<div class="zh-mask-ask-sort">
 						<div>话题分类</div>
-						<div class="zh-mask-ctn-sort-input">
+						<div class="zh-mask-ask-sort-input">
 							<i class="sprites-b search-icon"></i>
 							<input type="text" value="" placeholder="搜索话题" />
 						</div>
 					</div>
-					<div class="zh-mask-ctn-operate">
+					<div class="zh-mask-ask-operate">
 						<label for="anonymous"><input type="checkbox" name="" id="anonymous" value=""/>匿名</label>
-						<a class="blue-link" name="cancel" href="javascript:void(0);">取消</a>
+						<a class="blue-link" data-opt="cancel" href="javascript:void(0);">取消</a>
 						<input type="submit" value="发布"/>
-					</div>
-				</form>
+					</div><!--匿名取消发布问题操作-->
+				</form><!--问题表单-->
+			</div><!--提问遮罩-->
+			<div class="zh-mask-vote" id="zd-mask-vote">
+				<i class="sprites-b cancel-icon-black" data-opt="cancel"></i>
+				<div class="">
+					<button class="zh-mask-vote-btn" data-opt="vote-approval"><span class="zh-msk-vote-up"></span></button>
+					<button class="zh-mask-vote-btn" data-opt="vote-oppose"><span class="zh-msk-vote-down"></span></button>
+				</div>
+				<span>赞同</span>
+				<span>反对</span>
 			</div>
-		</div>
+		</div><!--全屏遮罩-->
 		
 		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
