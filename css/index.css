@@ -3,11 +3,16 @@
  *               In this project I try to use the flexbox solution, because it really simply and good method.
  *	Browser support: Chrome,Firefox,Safari,Tencent X5(If there is any problem, please update your Web Browser to latest version)
  *	2016.05 Created by @Qieguo
- *	For more infomationï¼šhttp://www.cnblogs.com/qieguo/
+ *	For more infomation,please visit my blog: http://www.cnblogs.com/qieguo/
  *--------------------------------------------------------------------
  */
 
 /***************	@common style    ***************/
+ol,ul,li {
+	padding: 0;
+	margin: 0;
+	list-style-position: inside;
+}
 html {
 	line-height: 1.5;
 	font-size: 15px;
@@ -19,16 +24,22 @@ body {
 	margin: 0;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
+	word-break: break-word;
 }
 a {
 	display: block;
 	text-decoration: none;
 	color: black;
 }
-a.blue-link {
+.blue-link {
 	display: inline;
 	text-decoration: none;
 	color: #259;
+}
+.gray-link {
+	display: inline;
+	text-decoration: none;
+	color: #999;
 }
 .clearfix:after {
 	content: "";
@@ -187,6 +198,7 @@ a.blue-link {
 	-webkit-box-flex: 1;
 	flex: 1 1 auto;
 	list-style: none;
+	margin: 0;
 }
 .zh-nav-menu-li.current {
 	background-color: rgba(46,150,234,0.2);
@@ -372,14 +384,12 @@ a.blue-link {
 	-webkit-align-items: center;
 	align-items: center;
 	margin-top: -5px;
-	/* height: 40px; */
+	border-bottom: 1px solid #DFDFDF;
 }
 .zh-main-set > h2 {
 	margin: 0;
 	color: #666;
 	font-size: 1.2rem;
-	/* height: 20px; */
-	/* padding: 0; */
 }
 .sprites-b {
 	box-sizing: border-box;
@@ -402,8 +412,8 @@ a.blue-link {
 	background-position: -70px -78px;
 }
 .zh-main-ctn {
-	padding: 6px 0;
-	border-top: 1px solid #DFDFDF;
+	padding: 8px 0;
+	border-bottom: 1px solid #DFDFDF;
 }
 .zh-main-ctn-sort {
 	display: -webkit-box;
@@ -430,7 +440,16 @@ a.blue-link {
 	font-size: 1rem;
 	margin: 5px 0;
 }
-.zh-main-ctn-author > span {
+.zh-main-ctn-author {
+	clear: both;
+	height: 25px;
+	margin-bottom: 1px;
+}
+.zh-main-ctn-author :nth-child(3) {
+	float: right;
+	/* margin-bottom: -2px; */
+}
+.zh-user-intro {
 	max-width: 200px;
 	overflow: hidden;
 	display: inline-block;
@@ -439,9 +458,13 @@ a.blue-link {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
-.zh-main-ctn-answer {
-	
+.zh-user-img {
+	width: 25px;
+	height: 25px;
 }
+.zh-main-ctn-answer {
+}
+
 .zh-main-answer-summary {
 	padding-top: 10px;
 	line-height: 1.7;
@@ -894,15 +917,12 @@ textarea[name="question-descrip"] {
 
 /*******************   collection start     *******************/
 .zh-main-tab-nav {
-	/* box-sizing: border-box; */
 	padding: 0;
 	margin: 0;
-	/* margin-top: 20px; */
 	height: 36px;
 	border-bottom: 1px solid #ccc;
-	/* line-height: 36px; */
 	font-size: 0;
-	letter-spacing: -4px;  /*用于兼容safari，根据不同字体字号或许需要做一定的调整*/
+	letter-spacing: -4px;  
 }
 
 .zh-main-tab-li {
@@ -915,7 +935,7 @@ textarea[name="question-descrip"] {
 	list-style-type: none;
 	display: inline-block;
 	border: none;
-	letter-spacing: normal;  /*用于兼容safari，根据不同字体字号或许需要做一定的调整*/
+	letter-spacing: normal; 
 	vertical-align: bottom;
 	color: #269;
 }
@@ -945,3 +965,125 @@ textarea[name="question-descrip"] {
 	margin: 0;
 }
 /*******************   collection end     *******************/
+
+
+/*******************   question page start     *******************/
+.zq-question {
+	border-bottom: 1px solid #DFDFDF;
+}
+.zq-question-sort {
+	
+}
+.topic-sort {
+    padding: 1px 10px;
+    text-decoration: none;
+    margin: 0 5px 5px 0;
+    display: inline-block;
+    white-space: nowrap;
+    background: #eff6fa;
+    border-radius: 30px;
+    line-height: 1.7;
+    /* height: 24px; */
+}
+.zq-modify {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: normal;
+	color: #999;
+}
+.zq-question-info {
+	/* height: 1%; */
+	margin: 3px 0 5px;
+}
+.zq-title-2 {
+	display: inline;
+	margin: 0 0 5px 0;
+	/* padding: 5px 0; */
+	font-size: 18px;
+	line-height: 1.7;
+}
+.zq-title-3 {
+	margin: 10px 0;
+	font-size: 16px;
+	line-height: 1.7;
+}
+.zq-question-intro  {
+	line-height: 1.7;
+	margin-bottom: 5px;
+}
+.zq-p-normal {
+	display: inline;	margin: 0 0 5px;
+}
+.zq-question-opt-list {
+	padding: 5px 0;
+	margin-bottom: 5px;
+	/* color: #999; */
+}
+.zq-question-opt {
+	display: inline-block;
+	color: #999
+}
+.zh-answers-title {
+	border-bottom: 1px solid #DFDFDF;
+}
+.zq-item-vote-info {
+	margin: 3px 0;
+	font-size: 14px;
+}
+.zq-main-answer {
+	margin: 5px 0;
+}
+.zq-main-answer img {
+	width: 100%;
+}
+.zq-main-answer li {
+	margin: 8px 0;
+}
+.zq-write-answer {
+	border: none;
+}
+.zq-follow-question {
+	box-sizing: border-box;
+	height: 32px;
+	padding: 5px 10px;
+	margin-right: 6px;
+	-webkit-box-flex: 0;
+	flex: 0 0 auto;
+	color: #333;
+	font-family: monospace;
+	font-size: 0.85em;
+	word-wrap: normal;
+	background: #8ab923;
+	background: -webkit-linear-gradient(top,#adda4d,#86b846);
+	background: linear-gradient(to bottom,#adda4d,#86b846);
+	border: 1px solid #6d8f29;
+	outline: 0;
+	border-radius: 3px;
+	cursor: pointer;
+	box-shadow: 0 1px 2px rgba(0,0,0,.05),inset 0 1px 1px rgba(255,255,255,.15);
+}
+/*******************   question page end     *******************/
+
+
+/*******************   topic page start     *******************/
+.zt-question-sort {
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.zt-topic-sort {
+    padding: 1px 10px;
+    text-decoration: none;
+    margin: 0 5px 5px 0;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 30px;
+    line-height: 1.7;
+    border: 1px solid lightblue;
+}
+.zt-topic-sort:hover,
+.blue-link:visited {
+	background: #BDF93B;
+}
+
+/*******************   topic page end     *******************/
