@@ -13,4 +13,4 @@ See it in action: http://qieguo2016.github.io/FakeZhihu/
 Screenshot
 ---
 
-null
+![atl="Screenshot"](https://github.com/qieguo2016/FakeZhihu/blob/master/img/Screenshot.png)
