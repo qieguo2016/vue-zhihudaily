@@ -1,5 +1,7 @@
-FakeZhihu
+~~FakeZhihu~~  Vue-Zhihu
 ---
+
+**Note: I am going to build zhihu via Vue, but this version is still the base, nothing changed yet!**
 
 This is a Zhihu web page on mobile device, and it is created just for learning.
 
