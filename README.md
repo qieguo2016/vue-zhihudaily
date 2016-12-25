@@ -2,6 +2,11 @@
 
 > A Vue.js project
 
+~~FakeZhihu~~  Vue-Zhihu
+---
+
+**Note: I am going to build zhihu via Vue, but this version is still the base, nothing changed yet!**
+
 ## Build Setup
 
 ``` bash
