@@ -1,16 +1,18 @@
-FakeZhihu
----
+# vue01
 
-This is a Zhihu web page on mobile device, and it is created just for learning.
+> A Vue.js project
 
-It is not finished yet, I am working...
+## Build Setup
 
-Demo
----
+``` bash
+# install dependencies
+npm install
 
-See it in action: http://qieguo2016.github.io/FakeZhihu/
+# serve with hot reload at localhost:8080
+npm run dev
 
-Screenshot
----
+# build for production with minification
+npm run build
+```
 
-![atl="Screenshot"](https://github.com/qieguo2016/FakeZhihu/blob/master/img/Screenshot.png)
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
