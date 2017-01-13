@@ -1,11 +1,6 @@
 知乎日报 - Vue 2.0 版本
 ------
 
-~~FakeZhihu~~  Vue-Zhihu
----
-
-~~**Note: I am going to build zhihu via Vue, but this version is still the base, nothing changed yet!**~~
-
 ## 后端
 
 后端只是一个express框架的代理转发服务器，将请求转发到知乎的服务器上。
