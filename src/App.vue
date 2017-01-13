@@ -8,7 +8,7 @@
         <router-link to="/">
           知乎日报
         </router-link>
-        <a href="https://github.com/qieguo2016" target="_blank" class="github">
+        <a href="https://github.com/qieguo2016/vue-zhihu" target="_blank" class="github">
           Built with Vue.js 2.0
         </a>
       </nav>
