@@ -4,23 +4,22 @@
 
 const path = require('path')
 const fs = require('fs')
-
-// setting
-const baseUrl = 'http://news-at.zhihu.com'
-const entryDir = path.join(__dirname, 'static', 'index.html')
-
 const express = require('express')
+const compress = require('compression')
+const http = require('http')
+const request = require('superagent')
+const logger = require('./logger')
+const config = require('./config')
+
+// baseURL setting
+const baseUrl = 'http://news-at.zhihu.com'
+
 const app = express()
 
 // close framework info
 app.disable('x-powered-by')
 
-// favicon
-const favicon = require('serve-favicon')
-app.use(favicon(path.join(__dirname, 'static', 'favicon.ico')))
-
 // gzip compress
-const compress = require('compression')
 app.use(compress())
 
 // post request body parser
@@ -29,23 +28,24 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 // static files
-app.use(express.static(path.join(__dirname, 'static')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // proxy request to zhihu
-const request = require('superagent')
 app.get('/api/*', function (req, res) {
-  let url = baseUrl + req.url
-  request.get(url).pipe(res)
+	logger.debug('proxy request: ' + req.url)
+	let url = baseUrl + req.url
+	request.get(url).pipe(res)
 });
 
 // send app's index.html
-const entry = fs.readFileSync(entryDir, 'utf-8')
+const entryDir = path.join(__dirname, 'dist', 'index.html')
+const entryFile = fs.readFileSync(entryDir, 'utf-8')  // ceche file
 app.get('*', function (req, res) {
-  res.send(entry)
+	logger.debug('local request: ' + req.url)
+	res.send(entryFile)
 })
 
-const port = '8080'
-const http = require('http')
+const port = config.SERVER_PORT
 const server = http.createServer(app).listen(port)
 
 console.log(`start server http://localhost:${port}`)

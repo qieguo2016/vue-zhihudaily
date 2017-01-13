@@ -1,67 +1,109 @@
 <template>
   <div id="app">
-    <header class="nav-menu">
-      <router-link to="/" exact>
-        <img class="logo" src="./assets/logo.png" alt="logo">
-      </router-link>
-      <router-link to="/tech">技术</router-link>
-      <router-link to="/life">生活</router-link>
-      <router-link to="/project">项目</router-link>
-      <router-link to="/about">me</router-link>
-      <a class="github" href="https://github.com/vuejs/vue-hackernews-2.0" target="_blank">
-        登录
-      </a>
+    <header class="header">
+      <nav class="inner">
+        <router-link to="/">
+          <img src="./assets/logo.png" alt="" class="zhihu-logo">
+        </router-link>
+        <router-link to="/">
+          知乎日报
+        </router-link>
+        <a href="https://github.com/qieguo2016" target="_blank" class="github">
+          Built with Vue.js 2.0
+        </a>
+      </nav>
     </header>
-    <transition name="fade" mode="out-in">
-      <router-view class="view"></router-view>
+    <transition
+      name="slide"
+      :enter-active-class="enterActiveClass"
+    >
+      <keep-alive>
+        <router-view class="view"></router-view>
+      </keep-alive>
     </transition>
   </div>
 </template>
 
+<script>
+  export default {
+    data () {
+      return {
+        enterActiveClass: 'animated fadeInRight'
+      }
+    },
+    watch: {
+      '$route' (to, from) {
+        const toDepth = to.path.split('/').length
+        const fromDepth = from.path.split('/').length
+        if (toDepth > fromDepth) {
+          this.enterActiveClass = 'animated fadeInRight'
+        } else {
+          this.enterActiveClass = 'animated fadeInLeft'
+        }
+      }
+    }
+  }
+</script>
+
 <style>
+  @import './assets/carousel.css';
+  @import './assets/zhihu.css';
+  @import './assets/animate.min.css';
 
   body {
-    font-family: Roboto, Helvetica, sans-serif;
-    margin: 0;
-    padding-top: 40px;
+    font-family:  "Lucida Grande",
+                  "Helvetica Neue",
+                  Helvetica, Arial,
+                  "Hiragino Sans GB",
+                  "Hiragino Sans GB W3",
+                  "WenQuanYi Micro Hei",
+                  "Microsoft YaHei UI",
+                  "Microsoft YaHei",
+                  sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #f6f6f6;
   }
-
-  .nav-menu {
-    background-color: #0593d3;
+  .inner,
+  .view {
+    max-width: 800px;
+    margin: auto;
+  }
+  .header {
     position: fixed;
-    z-index: 999;
     top: 0;
     left: 0;
     right: 0;
+    background-color: #009dd7;
+    z-index: 100;
   }
-
-  .nav-menu a {
-    color: rgba(224, 212, 212, .8);
-    line-height: 40px;
-    transition: color .15s ease;
+  .inner {
+    padding: 5px 10px;
+  }
+  .zhihu-logo {
+    height: 30px;
+  }
+  .inner > a {
     display: inline-block;
+    color: #fff;
     vertical-align: middle;
-    font-weight: 300;
-    margin-right: .5em;
+    padding-right: 6px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  .inner a.router-link-active {
+    font-weight: bold;
+  }
+  .inner > a:hover,
+  .inner > a:focus {
     text-decoration: none;
-    height: 40px;
+    outline: none;
   }
-
-  .nav-menu a:hover {
-    color: #fff;
+  .github {
+    float: right;
+    padding: 0;
   }
-
-  .nav-menu .router-link-active {
-    color: #fff;
-    font-weight: 400;
-  }
-
-  .logo {
-    width: 40px;
-    height: 40px;
-  }
-
   .view {
-    padding: 0 10px;
+    padding-top: 40px;
   }
 </style>

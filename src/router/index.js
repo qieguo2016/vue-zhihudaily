@@ -1,19 +1,35 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import Vue from 'vue'
+import Router from 'vue-router'
 
-Vue.use(Router);
+Vue.use(Router)
 
-import TechView from '../views/TechView.vue';
-import LifeView from '../views/LifeView.vue';
+import List from '../views/List.vue'
+import Detail from '../views/Detail.vue'
 
 export default new Router({
   mode: 'history',
-  scrollBehavior: () => ({y: 0}),
+  scrollBehavior: (to, from, savedPosition) => {
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    let position = {
+      x: 0,
+      y: 0
+    }
+    if (to.path === '/') {
+      position.y = +sessionStorage.getItem('scrollTop') || 0
+    }
+    return position
+  },
   routes: [
-    {path: '/tech/:page(\\d+)?', component: TechView},
-    {path: '/life/:page(\\d+)?', component: LifeView},
-    {path: '/post/:id(\\d+)', component: LifeView},
-    // { path: '/user/:id', component: UserView },
-    {path: '*', redirect: '/tech'}
+    {
+      path: '/',
+      component: List
+    },
+    {
+      path: '/detail/:id',
+      component: Detail
+    }
   ]
 })
