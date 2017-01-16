@@ -17,7 +17,7 @@ module.exports = {
 	},
 	output     : {
 		path         : path.resolve(__dirname, './dist'),
-		publicPath   : '/',
+		publicPath   : config.basePath,
 		filename     : '[name].[hash].js',
 		// 异步加载的业务模块，例如按需加载的.vue单文件组件
 		chunkFilename: "[id].[name].[chunkHash].js"

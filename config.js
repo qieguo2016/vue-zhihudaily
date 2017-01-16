@@ -8,6 +8,7 @@
 'use strict';
 
 module.exports = {
-	CLIENT_PORT: 8888,
-	SERVER_PORT: 8090,
+	CLIENT_PORT: 8888,			// 开发时的前端devServer
+	SERVER_PORT: 8090,			// 后端server
+	basePath: '/daily/',	// 多站点部署时的path，原则上应该用二级域名做多站点应用的部署，目前未申请个人域名，所以用path的方式来区分应用
 }

@@ -2,10 +2,10 @@
   <div id="app">
     <header class="header">
       <nav class="inner">
-        <router-link to="/">
+        <router-link to="/daily">
           <img src="./assets/logo.png" alt="" class="zhihu-logo">
         </router-link>
-        <router-link to="/">
+        <router-link to="/daily">
           知乎日报
         </router-link>
         <a href="https://github.com/qieguo2016/vue-zhihu" target="_blank" class="github">

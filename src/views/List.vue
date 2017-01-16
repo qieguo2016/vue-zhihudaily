@@ -3,7 +3,7 @@
     <carousel>
       <carousel-item v-for="(item, index) in top_stories">
         <div :style="{'background-image':`url(${item.image})`}" class="image-container"></div>
-        <router-link :to="`detail/${item.id}`" class="carousel-caption">
+        <router-link :to="`daily/detail/${item.id}`" class="carousel-caption">
           <h1 class="zhihu-title">
             {{item.title}}
           </h1>
@@ -14,7 +14,7 @@
       <div class="list-title">
         {{day.date | date}}
       </div>
-      <router-link :to="`detail/${item.id}`" v-for="item in day.stories" class="media">
+      <router-link :to="`daily/detail/${item.id}`" v-for="item in day.stories" class="media">
         <div class="media-body">
           {{item.title}}
         </div>
@@ -78,6 +78,7 @@
           })
       }
     },
+//    preFetch: fetchLatest,
     preFetch: fetchLatest,
     beforeMount () {
       if (!this.list.length) {
