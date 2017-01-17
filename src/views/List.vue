@@ -22,7 +22,7 @@
                     {{item.title}}
                 </div>
                 <div class="media-right">
-                    <img :src="item.images[0]" alt=""/>
+                    <img :src="item.images[0]" alt="" height="80px" width="100px"/>
                 </div>
             </router-link>
         </div>
@@ -120,9 +120,8 @@
     .mint-swipe-indicators .mint-swipe-indicator {
         width: 11px;
         height: 11px;
-        background: transparent;
+        background: rgba(255, 255, 255, 0.2);
         opacity: 1;
-        border: 1px solid #ffffff;
     }
 
     @media (max-width: 800px) {
@@ -134,11 +133,6 @@
             height: 200px;
         }
 
-        .list {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
         .zhihu-title {
             font-size: 18px;
             margin-bottom: -5px;
@@ -146,22 +140,20 @@
     }
 
     .list-title {
-        padding-top: 15px;
-        padding-bottom: 15px;
-        color: #999;
+        padding-top: 8px;
+        padding-bottom: 6px;
+        color: #fff;
         font-size: 16px;
-        font-weight: bold;
+        background-color: #009dd7;
+        text-align: center;
     }
 
     .media {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 15px;
         padding: 15px;
         min-height: 80px;
-        border-radius: 6px;
-        background-color: #fff;
-        box-shadow: 0 4px 6px #ccc;
+        border-bottom: 1px solid #ddd;
     }
 
     .media:hover,
@@ -176,11 +168,6 @@
         font-size: 16px;
         text-decoration: none;
         padding-right: 10px;
-    }
-
-    .media-right img {
-        width: 100px;
-        height: 100px;
     }
 
     .media:last-child {

@@ -61,7 +61,7 @@
                   "Microsoft YaHei",
                   sans-serif;
     -webkit-font-smoothing: antialiased;
-    background: #f6f6f6;
+    /*background: #f6f6f6;*/
   }
   .inner,
   .view {
