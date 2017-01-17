@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const config = require('./config')
 
 module.exports = {
-	entry      : {
-		app   : './src/main.js',
+	entry: {
+		app: './src/main.js',
 		vendor: [
 			'es6-promise',
 			'axios',
@@ -15,18 +15,18 @@ module.exports = {
 			'vuex-router-sync'
 		]
 	},
-	output     : {
-		path         : path.resolve(__dirname, './dist'),
-		publicPath   : config.basePath,
-		filename     : '[name].[hash].js',
+	output: {
+		path: path.resolve(__dirname, './dist'),
+		publicPath: config.basePath,
+		filename: '[name].[hash].js',
 		// 异步加载的业务模块，例如按需加载的.vue单文件组件
 		chunkFilename: "[id].[name].[chunkHash].js"
 	},
-	module     : {
+	module: {
 		rules: [
 			{
-				test   : /\.vue$/,
-				loader : 'vue-loader',
+				test: /\.vue$/,
+				loader: 'vue-loader',
 				options: {
 					loaders: {
 						// Since sass-loader (weirdly) has SCSS as its default parse mode, we map
@@ -39,50 +39,47 @@ module.exports = {
 				}
 			},
 			{
-				test   : /\.js$/,
-				loader : 'babel-loader',
+				test: /\.js$/,
+				loader: 'babel-loader',
 				exclude: /node_modules/
 			},
 			{
-				test   : /\.(png|jpg|gif|svg)$/,
-				loader : 'file-loader',
+				test: /\.(png|jpg|gif|svg)$/,
+				loader: 'file-loader',
 				options: {
 					name: '[name].[ext]?[hash]'
 				}
 			}
 		]
 	},
-	resolve    : {
+	resolve: {
 		alias: {
 			'vue$': 'vue/dist/vue.common.js'
 		}
 	},
-	devServer  : {
+	devServer: {
 		historyApiFallback: true,
-		noInfo            : true,
-		port              : config.CLIENT_PORT,
-		proxy             : {
-			"/api": {
-				"target"    : {
-					"host"    : "localhost",
-					"protocol": 'http:',
-					"port"    : config.SERVER_PORT,
-				},
-				ignorePath  : false,
-				changeOrigin: true,
-				secure      : false,
-			}
+		noInfo: true,
+		port: config.CLIENT_PORT,
+		proxy: {
+			"/api/*": {
+				"target": `http://localhost:${config.SERVER_PORT}`,
+			},
+			"/loadImg": {
+				"target": `http://localhost:${config.SERVER_PORT}`,
+			},
+			secure: false,
 		},
 	},
 	performance: {
 		hints: false
 	},
-	devtool    : '#eval-source-map',
-	plugins    : [
+	devtool: '#eval-source-map',
+	plugins: [
 
 		// 提取公共引用脚本并独立打包，避免重复打包
 		new webpack.optimize.CommonsChunkPlugin({
-			name    : 'vendor',
+			name: 'vendor',
 			filename: 'vendor.bundle.js',
 		}),
 
@@ -90,7 +87,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: './src/index.html',
-			inject  : true
+			inject: true
 		})],
 }
 
@@ -105,7 +102,7 @@ if (process.env.NODE_ENV === 'production') {
 		}),
 		new webpack.optimize.UglifyJsPlugin({
 			sourceMap: true,
-			compress : {
+			compress: {
 				warnings: false
 			}
 		}),

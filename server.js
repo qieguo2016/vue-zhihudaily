@@ -33,7 +33,8 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // proxy request to zhihu
 app.get(basePath + 'api/*', function (req, res) {
-	let url = baseUrl + req.url.split('/daily')[1]
+	// let url = baseUrl + req.url.split(basePath)[1]
+	let url = baseUrl + req.url
 	logger.debug('proxy request: ' + url)
 	request.get(url).pipe(res)
 });
@@ -46,18 +47,18 @@ app.get(basePath + 'loadImg', function (req, res) {
 })
 
 // serve static files of basePath
-app.get(basePath + '*', function (req, res) {
-	logger.debug('local request: ' + req.url)
-	let file = req.path.split('/daily/')[1]
-	readFile(file, function (err, data) {
-		if (err) {
-			res.status = 404;
-			res.send('Not Found');
-		} else {
-			res.send(data);
-		}
-	})
-})
+// app.get(basePath + '*', function (req, res) {
+// 	logger.debug('local request: ' + req.url)
+// 	let file = req.path.split(basePath)[1]
+// 	readFile(file, function (err, data) {
+// 		if (err) {
+// 			res.status = 404;
+// 			res.send('Not Found');
+// 		} else {
+// 			res.send(data);
+// 		}
+// 	})
+// })
 
 // send app's index.html
 const entryDir = path.join(__dirname, 'dist', 'index.html')

@@ -28,5 +28,5 @@ export const fetchDetail = (id) => {
 function replaceImageUrl(str) {
 	let reg = /https?:(\\?\/){2}(pic\d*\.zhimg\.com\\?\/)/g
 	// return str.replace(reg, 'https://images.weserv.nl/?url=$2')
-	return str.replace(reg, '/daily/loadImg/?url=$2')
+	return str.replace(reg, '/loadImg?url=$2')
 }
