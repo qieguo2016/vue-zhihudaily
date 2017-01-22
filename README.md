@@ -1,4 +1,4 @@
-知乎日报 - Vue 2.0 版本
+知乎日报 - Vue 2.0 版本 [Live Demo](http://demo.qieguo.me/zhihudaily/)
 ------
 
 > 知乎日报 - 每天 3 次,每次 7 分钟  
